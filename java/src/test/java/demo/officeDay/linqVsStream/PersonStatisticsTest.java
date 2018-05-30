@@ -29,57 +29,21 @@ public class PersonStatisticsTest {
     }
 
     @Test
-    public void performanceOldestPeopleByCountry1(){
-        personStatistics.oldestPeopleByCountry();
-    }
-
-    @Test
-    public void performanceOldestPeopleByCountry2(){
-        personStatistics.oldestPeopleByCountry2();
-    }
-
-    @Test
-    public void performanceOldestPeopleByCountry3(){
-        personStatistics.oldestPeopleByCountry3();
-    }
-
-    @Test
-    public void performanceOldestPeopleByCountry11(){
-        personStatistics.oldestPeopleByCountry();
-    }
-
-    @Test
-    public void performanceOldestPeopleByCountry21(){
-        personStatistics.oldestPeopleByCountry2();
-    }
-
-    @Test
-    public void performanceOldestPeopleByCountry31(){
-        personStatistics.oldestPeopleByCountry3();
-    }
-
-    @Test
     public void comparingOldestPeopleByCountryYieldSameResult(){
+        Map<String, List<Person>> oldestPeopleByCountryImperative = personStatistics.oldestPeopleByCountryImperative();
         Map<String, List<Person>> oldestPeopleByCountry = personStatistics.oldestPeopleByCountry();
-        Map<String, List<Person>> oldestPeopleByCountry2 = personStatistics.oldestPeopleByCountry2();
-        Map<String, List<Person>> oldestPeopleByCountry3 = personStatistics.oldestPeopleByCountry3();
 
+
+        List<Person> braziliansImperative = oldestPeopleByCountryImperative.get("Brazil");
+        assertEquals(65, braziliansImperative.size());
 
         List<Person> brazilians = oldestPeopleByCountry.get("Brazil");
         assertEquals(65, brazilians.size());
 
-        List<Person> brazilians2 = oldestPeopleByCountry2.get("Brazil");
-        assertEquals(65, brazilians2.size());
 
-        List<Person> brazilians3 = oldestPeopleByCountry3.get("Brazil");
-        assertEquals(65, brazilians3.size());
-
-
+        braziliansImperative.sort(Comparator.comparing(Person::getName));
         brazilians.sort(Comparator.comparing(Person::getName));
-        brazilians2.sort(Comparator.comparing(Person::getName));
-        brazilians3.sort(Comparator.comparing(Person::getName));
 
-        assertIterableEquals(brazilians, brazilians2);
-        assertIterableEquals(brazilians2, brazilians3);
+        assertIterableEquals(braziliansImperative, brazilians);
     }
 }
