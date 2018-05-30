@@ -45,6 +45,8 @@
     <Compile Include="events\Calculator.cs" />
     <Compile Include="events\CalculatorEventArgs.cs" />
     <Compile Include="getSet\Person.cs" />
+    <Compile Include="linqVsStream\Person.cs" />
+    <Compile Include="linqVsStream\PersonStatistics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
