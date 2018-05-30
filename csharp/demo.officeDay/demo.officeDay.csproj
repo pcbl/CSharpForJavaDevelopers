@@ -44,6 +44,17 @@
   <ItemGroup>
     <Compile Include="events\Calculator.cs" />
     <Compile Include="events\CalculatorEventArgs.cs" />
+    <Compile Include="generics\AbstractServiceCommunicator.cs" />
+    <Compile Include="generics\Band.cs" />
+    <Compile Include="generics\GenericBand.cs" />
+    <Compile Include="generics\HealthInformation.cs" />
+    <Compile Include="generics\HealthService.cs" />
+    <Compile Include="generics\MusicService.cs" />
+    <Compile Include="generics\MusicStatistics.cs" />
+    <Compile Include="generics\Pop.cs" />
+    <Compile Include="generics\PopBand.cs" />
+    <Compile Include="generics\Rock.cs" />
+    <Compile Include="generics\RockBand.cs" />
     <Compile Include="getSet\Person.cs" />
     <Compile Include="linqVsStream\Person.cs" />
     <Compile Include="linqVsStream\PersonStatistics.cs" />

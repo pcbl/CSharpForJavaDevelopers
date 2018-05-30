@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace demo.officeDay.linqVsStream.Tests
+namespace demo.officeDay.linqVsStream
 {
     [TestClass()]
     public class PersonStatisticsTests
