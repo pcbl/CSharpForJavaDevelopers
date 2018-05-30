@@ -12,7 +12,7 @@ public class PersonStatistics {
         return personList.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.maxBy(Comparator.comparingInt(Person::getAge))));
     }
 
-    public Map<String, List<Person>> oldestPeopleByCountry() {
+    public Map<String, List<Person>> oldestPeopleByCountryImperative() {
         Map<String, List<Person>> peopleByCountry = new HashMap<>();
         for(Person person : personList){
             List<Person> people = peopleByCountry.get(person.getCountry());
@@ -36,7 +36,7 @@ public class PersonStatistics {
     }
 
 
-    public Map<String, List<Person>> oldestPeopleByCountry2(){
+    public Map<String, List<Person>> oldestPeopleByCountryCustomCollector(){
         return personList.stream().collect(Collectors.groupingBy(Person::getCountry, Collector.of(
                 () -> new ArrayList<>(),
                 (people, person) -> {
@@ -59,7 +59,7 @@ public class PersonStatistics {
         )));
     }
 
-    public Map<String, List<Person>> oldestPeopleByCountry3(){
+    public Map<String, List<Person>> oldestPeopleByCountry(){
         return personList.stream()
                 .collect(Collectors.collectingAndThen(Collectors.groupingBy(Person::getCountry),
                     (peopleByCountry) -> {
