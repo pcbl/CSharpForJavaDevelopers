@@ -1,10 +1,10 @@
 package demo.officeDay.generics;
 
-import java.io.IOException;
+import java.lang.reflect.ParameterizedType;
 
 public abstract class AbstractServiceCommunicator<IN, OUT> {
 
-    public OUT communicate(IN input) throws IllegalAccessException, InstantiationException {
+    public OUT communicate(IN input) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
         System.out.println(getServiceByName(input));
 
         OUT response = getResponseClass().newInstance();
@@ -18,4 +18,9 @@ public abstract class AbstractServiceCommunicator<IN, OUT> {
     }
 
     protected abstract Class<OUT> getResponseClass();
+
+    private Class<OUT> getResponseClassReflection() throws ClassNotFoundException {
+        String genericResponseClassName = ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1].getTypeName();
+        return (Class<OUT>) Thread.currentThread().getContextClassLoader().loadClass(genericResponseClassName);
+    }
 }
