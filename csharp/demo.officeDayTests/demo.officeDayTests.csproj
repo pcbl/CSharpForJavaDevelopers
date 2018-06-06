@@ -56,6 +56,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="codeDom\CSharpScriptEngineTests.cs" />
     <Compile Include="events\CalculatorTests.cs" />
     <Compile Include="generics\GenericsTests.cs" />
     <Compile Include="linqVsStream\PersonStatisticsTests.cs" />

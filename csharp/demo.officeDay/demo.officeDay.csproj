@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="codeDom\Compiler.cs" />
+    <Compile Include="codeDom\CSharpScriptEngine.cs" />
     <Compile Include="events\Calculator.cs" />
     <Compile Include="events\CalculatorEventArgs.cs" />
     <Compile Include="generics\AbstractServiceCommunicator.cs" />
