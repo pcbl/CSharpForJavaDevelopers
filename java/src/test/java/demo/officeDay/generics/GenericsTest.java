@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GenericsTest {
     @Test
-    public void javaGenericsLimitation() throws InstantiationException, IllegalAccessException {
+    public void javaGenericsLimitation() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
         Band band = new Band();
         MusicStatistics musicStatistics = new MusicService().communicate(band);
         assertNotNull(musicStatistics);
