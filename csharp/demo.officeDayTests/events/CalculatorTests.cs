@@ -15,7 +15,8 @@ namespace demo.officeDayTests.events
             int expectedValue = 3;
        
             Calculator calculator = new Calculator();
-
+            //Remember that currentValue is on AddTest() scope! On Java that can be a bit challenging...
+            //Open Dotpeek!
             EventHandler<CalculatorEventArgs> myHandler = (sender, args) => currentValue = args.Result;
             calculator.Processed += myHandler;
             calculator.Add(1);

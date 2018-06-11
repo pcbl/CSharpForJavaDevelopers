@@ -30,6 +30,8 @@ namespace demo.officeDay.linqVsStream
                         Person = countries.First(personByCountry => personByCountry.Age == countries.Max(i => i.Age))
                     }
                 ;
+
+       
          /*   var oldestPersonByCountry =
             personList
                 .GroupBy(person => person.Country)

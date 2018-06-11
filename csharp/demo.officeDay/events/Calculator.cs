@@ -9,7 +9,9 @@ namespace demo.officeDay.events
     public class Calculator
     {
         public int Value { get; private set; }
-        
+
+        //event keyword meand that all event publishing/subscription is automatically handled
+        //Event is a strongly typed Delegate(Pointer to method!)
         public event EventHandler<CalculatorEventArgs> Processed;
 
         public Calculator()

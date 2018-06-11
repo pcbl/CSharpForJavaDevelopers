@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace demo.officeDay.codeDom.Tests
+namespace demo.officeDay.codeDom
 {
     [TestClass()]
     public class CSharpScriptEngineTests
