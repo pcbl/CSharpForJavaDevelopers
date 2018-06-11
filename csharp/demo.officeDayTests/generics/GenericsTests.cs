@@ -25,6 +25,10 @@ namespace demo.officeDay.generics
 
             print(new Band());
             print(new Person("Kurimin,Brazil,30"));
+
+            playMusic(new RockBand());
+
+            playMusic(new PopBand());
         }
 
 
@@ -35,7 +39,7 @@ namespace demo.officeDay.generics
 
         public void playMusic<GENRE>(GenericBand<GENRE> target)
         {
-            target.Play();
+            var genre = target.Play();
         }
 
         /*

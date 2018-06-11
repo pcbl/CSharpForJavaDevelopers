@@ -10,7 +10,7 @@ namespace demo.officeDay.generics
     {
         public override Rock Play()
         {
-            throw new NotImplementedException();
+            return new Rock();
         }
     }
 }

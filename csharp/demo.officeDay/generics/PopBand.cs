@@ -10,7 +10,7 @@ namespace demo.officeDay.generics
     {
         public override Pop Play()
         {
-            throw new NotImplementedException();
+            return new Pop();
         }
     }
 }

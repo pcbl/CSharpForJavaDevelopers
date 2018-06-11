@@ -1,4 +1,6 @@
-﻿namespace demo.officeDay.getSet
+﻿using System.IO;
+
+namespace demo.officeDay.getSet
 {
     /// <summary>
     /// Get and Set exists on C# since Day 0
@@ -6,6 +8,16 @@
     public class Person
     {
         private string name;
+
+        //Constants
+        public const string ConstInitiatilized="";
+        //Readonly Variables, Like constants... But can be initialized on Constructor
+        private readonly string ConstructorInitialized;
+
+        public Person()
+        {
+            ConstructorInitialized = "Wow";
+        }
 
         public string Name
         {
@@ -15,7 +27,6 @@
                 name = value; 
                 //Here you could log the new Value, for example
             }
-
         }
 
         //Same as Name, but way shorter
