@@ -21,9 +21,17 @@ public class GenericsTest {
     public void trueGenericMethod(){
         print(new Band());
         print(new Person("Babaca", "Brazil", 25));
+
+        playMusic(new RockBand());
+        playMusic(new PopBand());
     }
 
     public <T> void print(T target){
         System.out.println(target.getClass().getName());
+    }
+
+    public void playMusic(GenericBand band){
+        Object genre = band.play();
+        print(genre);
     }
 }

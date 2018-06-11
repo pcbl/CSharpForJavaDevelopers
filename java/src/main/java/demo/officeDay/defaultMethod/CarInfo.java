@@ -15,7 +15,15 @@ public interface CarInfo {
 
     int getMaxSpeed();
 
-    static CarInfo create(int maxSpeed){
+    static CarInfo create(int maxSpeed) {
         return () -> maxSpeed;
     }
+
+//                new CarInfo() {
+//                    @Override
+//                    public int getMaxSpeed() {
+//                        return maxSpeed;
+//                    }
+//                };
+
 }
